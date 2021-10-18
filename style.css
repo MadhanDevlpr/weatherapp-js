@@ -5,16 +5,25 @@
 }
 body{
     font-family: 'montserrat', sans-serif;
-    background: url(background.jpg);
+    background: url(1.png);
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
 }
 .app-wrap{
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    background-image: linear-gradient(to bottom,rgba(0,0,0,0.3),rgba(0,0,0,0.6));
+    min-height: 85vh;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 95vw;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,.5));
 }
 header{
     display: flex;
@@ -95,4 +104,114 @@ main{
     font-size: 24px;
     font-weight: 500;
     text-shadow: 0px 4px rgba(0,0,0,0.4);
+}
+@media(max-width:1040px){
+    body{
+        height: 120vh;
+    }
+}
+@media(max-width:992px){
+    body{
+        height: 100vh;
+    }
+    header h1{
+        font-weight: medium;
+        color: #fff;
+        font-size: 20px;
+    }
+    header p{
+        font-weight: medium;
+        color: #fff;
+        font-size: 10px;
+    }
+    header input::placeholder{
+        color: #161616;
+    }
+    header input {
+        width:100%;
+        max-width: 300px;
+        padding:10px 15px;
+        border: none;
+        outline: none;
+        margin-top: 30px;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 16px 0px 16px 0px;
+        border-bottom: 3px solid rgba(0,0,0,0.65);
+        color: #161616;
+        font-size: 13px;
+        font-weight: 300;
+        transition: .2s ease-in;
+    }
+    header input:focus{
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+    main{
+        flex: 1 1 100%;
+        padding: 25px 25px 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .location .city{
+        color: #fff;
+        font-size: 28px;
+        font-weight: medium;
+        margin-bottom:10px;
+    }
+    .location .date{
+        color: #fff;
+        font-size: 16px;
+    }
+    .current .temp{
+        color: #fff;
+        font-size: 80px;
+        font-weight: 900;
+        margin: 30px 0px;
+        text-shadow: 2px 6px rgba(0,0,0,0.65);
+    }
+    .current .temp span{
+        font-weight: 500;
+    }
+    .current .weather{
+        color: #fff;
+        font-size: 32px;
+        font-weight: 700;
+        font-style: italic;
+        margin-bottom: 30px;
+        text-shadow: 0px 3px rgba(0,0,0,0.4);
+    }
+    .current .hi-low{
+        color: #fff;
+        font-size: 24px;
+        font-weight: 500;
+        text-shadow: 0px 4px rgba(0,0,0,0.4);
+    }
+}
+@media(max-width:770px) and (max-height:1030px){
+    header h1{
+        font-size: 32px;
+    }
+    header p{
+        font-size: 16px;
+    }
+    header input{
+        font-size: 18px;
+    }
+}
+@media(max-height:570px){
+    body{
+        height: 110vh;
+    }
+}
+@media(max-width:290px) and (max-height:660px){
+    header h1{
+        font-size: 18px;
+    }
+    header p{
+        font-size: 10px;
+    }
+    header input{
+        font-size: 12px;
+    }
 }
